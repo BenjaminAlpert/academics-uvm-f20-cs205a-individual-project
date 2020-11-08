@@ -1,7 +1,7 @@
 from src.User import User
 from src.Event import Event
-from Displayer import Displayer
-from DisplayPeriod import DisplayPeriod
+from extra.Displayer import Displayer
+from extra.DisplayPeriod import DisplayPeriod
 import unittest
 
 class Prompt:

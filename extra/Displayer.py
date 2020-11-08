@@ -1,4 +1,4 @@
-from DisplayPeriod import DisplayPeriod
+from extra.DisplayPeriod import DisplayPeriod
 import time
 
 class Displayer:

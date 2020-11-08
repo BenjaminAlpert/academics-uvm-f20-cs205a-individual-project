@@ -1,5 +1,5 @@
-from Prompt import *
-from Calendar import Calendar
+from extra.Prompt import *
+from src.Calendar import Calendar
 import time
 
 class Interface:
@@ -8,9 +8,9 @@ class Interface:
         self.currentUser = self.calendar.getUsers()[0]
         self.prompts = [
             AuthorizePrompt(self),
+            DoTestsPrompt(self),
             CreateUserPrompt(self),
             ListUsersPrompt(self),
-            DoTestsPrompt(self),
             CreateEventPrompt(self),
             ListEventsPrompt(self),
             ExitPrompt(self)
@@ -18,10 +18,12 @@ class Interface:
 
         while(True):
             index = 0
+            print()
             for prompt in self.prompts:
                 print("(%d) %s" % (index, prompt.getText()))
                 index += 1
 
+            print()
             userInput = input("Select Option by Number: ")
             index = 0
             for prompt in self.prompts:
@@ -40,6 +42,3 @@ class Interface:
                 elif(index == len(self.prompts)):
                     print("EROROR: Invalid option.")
                 index += 1
-
-print(int(time.time()), int(time.time()+(2*24*60*60)))
-Interface()
