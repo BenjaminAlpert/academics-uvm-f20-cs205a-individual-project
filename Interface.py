@@ -1,5 +1,6 @@
 from Prompt import *
 from Calendar import Calendar
+import time
 
 class Interface:
     def __init__(self):
@@ -9,9 +10,10 @@ class Interface:
             AuthorizePrompt(self),
             CreateUserPrompt(self),
             ListUsersPrompt(self),
-            ExitPrompt(self),
+            DoTestsPrompt(self),
             CreateEventPrompt(self),
-            ListEventsPrompt(self)
+            ListEventsPrompt(self),
+            ExitPrompt(self)
         ]
 
         while(True):
@@ -39,7 +41,5 @@ class Interface:
                     print("EROROR: Invalid option.")
                 index += 1
 
+print(int(time.time()), int(time.time()+(2*24*60*60)))
 Interface()
-
-#1604617200
-#1604618000

@@ -2,9 +2,9 @@ from User import User
 from Event import Event
 from Displayer import Displayer
 from DisplayPeriod import DisplayPeriod
+import MainTester
 
 class Prompt:
-
     text = "DEFAULT (DOES NOTHING)"
 
     def __init__(self, interface):
@@ -144,3 +144,9 @@ class ListEventsPrompt(Prompt):
             return self.displayer.getDisplayText()
         else:
             return "ERROR"
+
+class DoTestsPrompt(Prompt):
+    text = "Do Tests"
+
+    def doAction(self):
+        MainTester.main()

@@ -36,7 +36,7 @@ class Event:
         self.title = title
 
     def getOwner(self):
-        return owner
+        return self.owner
 
     def setOwner(self, owner):
         self.owner = owner
