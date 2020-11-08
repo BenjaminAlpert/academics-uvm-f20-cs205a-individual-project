@@ -1,10 +1,11 @@
 import unittest
-from tests.CalendarTester import *
-from tests.EventTester import *
+from tests.CalendarTester import CalendarTester
+from tests.EventTester import EventTester
+from tests.UserTester import UserTester
 from extra.Interface import Interface
 
 
-#unittest.main()
+unittest.main()
 
-print("Authorize with name 'root' and password 'root' to start\n")
-Interface()
+#print("Authorize with name 'root' and password 'root' to start\n")
+#Interface()

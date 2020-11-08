@@ -88,7 +88,7 @@ class CalendarTester(unittest.TestCase):
         self.calendar.addEvent(event3)
         assert event1 in self.calendar.getEvents() and not (event2 in self.calendar.getEvents()) and event3 in self.calendar.getEvents(), "adding event after removing an event fails"
 
-    def testDoesEventExist(self):
+    def testDoesEventExist1(self):
         user1 = User("user1", "asdi97")
         user2 = User("user2", "asdfu8")
         event1 = Event(user1)
