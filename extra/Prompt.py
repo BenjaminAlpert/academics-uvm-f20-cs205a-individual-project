@@ -56,8 +56,6 @@ class CreateUserPrompt(Prompt):
             return "ALERT: Access Denied. You must be root to add new user."
 
 class AuthorizePrompt(Prompt):
-    name = None
-    password = None
     text = "Authorize"
 
     def prompt(self):

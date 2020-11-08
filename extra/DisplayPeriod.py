@@ -1,7 +1,9 @@
 import enum
 
 class DisplayPeriod(enum.Enum):
-    DAY = 1
-    WEEK = 2
-    MONTH = 3
-    YEAR = 4
+    def __init__(self):
+        self.DAY = 1
+        self.WEEK = 2
+        self.MONTH = 3
+        self.YEAR = 4
+        super().__init__(self)
