@@ -25,22 +25,28 @@ class Calendar:
             return 0
         return 1
 
-    """
-    def removeEvent(self, event):
-        if(doesEventExist(event)):
-            self.events.remove(event)
-            return 0
-        return 1
-    """
-
     def getUsers(self):
         return self.users
 
+
+
+    # Correct implementation of findUser
     def findUser(self, name):
         for user in self.users:
             if(user.getName() == name):
                 return user
         return None
+
+    """
+    # Incorrect implementation of findUser:
+    def findUser(self, name):
+        for user in self.users:
+            if(user == name):
+                return user
+        return None
+    """
+
+
 
     def doesUserExist(self, user):
         return user in self.users
