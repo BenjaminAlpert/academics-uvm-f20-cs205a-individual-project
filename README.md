@@ -1,10 +1,59 @@
 # Benjamin Alpert's CS205A Individual Project
 
-## UML Class Diagram
+## UML Class Diagrams
 
-![UML Class Diagram](/docs/UML/UML.png)
 
-## Failed Implementation
+### UML Generation
+I used [pylint's](https://pypi.org/project/pylint/) `pyreverse` command to generate the UML Class Diagrams.
+
+First, I installed [pylint](https://pypi.org/project/pylint/):
+```bash
+  sudo apt install pylint
+```
+
+Alternatively, I could have installed [pylint](https://pypi.org/project/pylint/) with pip:
+```bash
+  pip install pylint
+```
+
+Then, I generated the UML Class Diagrams with the below commands
+```bash
+  cd academics-uvm-f20-cs205a-individual-project
+
+  pyreverse -my -o png . --ignore=src.extras,tests
+  mv classes.png ./docs/UML/entities.png
+
+  pyreverse -my -o png . --ignore=src
+  mv classes.png ./docs/UML/tests.png
+
+  pyreverse  -my -o png src/extras
+  mv classes.png ./docs/UML/extras.png
+
+  pyreverse  -my -o png .
+  mv classes.png ./docs/UML/full_package.png
+
+  rm packages.png
+```
+
+### Entities
+![Entities UML Diagram](/docs/UML/entities.png)
+
+### Tests
+![Tests UML Class Diagram](/docs/UML/tests.png)
+
+### Extras
+![Extras UML Class Diagram](/docs/UML/extras.png)
+
+### Full Package
+![Full UML Class Diagram](/docs/UML/full_package.png)
+
+
+
+
+
+
+
+## Failed Test
 
 ![Failed Implementation Screenshot](/docs/UML/FailedTestScreenshot.png)
 
@@ -21,7 +70,7 @@
 ```python
   def findUser(self, name):
       for user in self.users:
-          if(user == name):
+          if(user == name): #this link is incorrect
               return user
       return None
 ```
@@ -58,4 +107,4 @@ EventTester | testInitOwner3 |
 EventTester | testStart1 |
 EventTester | testStart2 |
 EventTester | testStart3 |
-EventTester | testStart4 | 
+EventTester | testStart4 |

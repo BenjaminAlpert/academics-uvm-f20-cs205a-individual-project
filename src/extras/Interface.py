@@ -1,4 +1,4 @@
-from extra.Prompt import *
+from src.extras.Prompt import *
 from src.Calendar import Calendar
 import time
 
