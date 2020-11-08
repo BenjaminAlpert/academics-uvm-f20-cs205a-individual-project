@@ -1,5 +1,5 @@
-from User import User
-from Event import Event
+from src.User import User
+from src.Event import Event
 
 class Calendar:
     def __init__(self):
@@ -10,21 +10,28 @@ class Calendar:
         return self.events
 
     def doesEventExist(self, event):
-        for e in self.events:
-            if(e == event):
-                return True
-        return False
+        return event in self.events
 
 
     def addEvent(self, event):
         if(not self.doesEventExist(event)):
+            if(not event.getOwner() in self.users):
+                self.addUser(event.getOwner())
             self.events.append(event)
 
+    def removeEvent(self, event):
+        if(self.doesEventExist(event)):
+            self.events.remove(event)
+            return 0
+        return 1
+
+    """
     def removeEvent(self, event):
         if(doesEventExist(event)):
             self.events.remove(event)
             return 0
         return 1
+    """
 
     def getUsers(self):
         return self.users
@@ -36,10 +43,7 @@ class Calendar:
         return None
 
     def doesUserExist(self, user):
-        for u in self.users:
-            if(u.getName() == user.getName()):
-                return True
-        return False
+        return user in self.users
 
     def addUser(self, user):
         if(not self.doesUserExist(user)):

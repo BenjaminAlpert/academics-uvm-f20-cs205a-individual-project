@@ -1,8 +1,8 @@
-from User import User
-from Event import Event
+from src.User import User
+from src.Event import Event
 from Displayer import Displayer
 from DisplayPeriod import DisplayPeriod
-import MainTester
+import unittest
 
 class Prompt:
     text = "DEFAULT (DOES NOTHING)"
@@ -149,4 +149,4 @@ class DoTestsPrompt(Prompt):
     text = "Do Tests"
 
     def doAction(self):
-        MainTester.main()
+        unittest.main()
