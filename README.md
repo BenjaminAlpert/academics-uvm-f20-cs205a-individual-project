@@ -147,9 +147,9 @@ UserTester | testAuthorizeAndIsAuthorized1 | Tests to check that incorrect passw
 UserTester | testUnauthorize | Tests that unauthorize() method works by using the isAuthorized() method
 EventTester | testInitOwner1 | Tests that ownership is initially set to the passed in user object
 EventTester | testOwner1 | Tests getter and/or setter of 'owner' field with some special characters ("^.*&\"\'%2|")
-EventTester | testOwner2 |
-EventTester | testInitOwner3 |
-EventTester | testStart1 |
+EventTester | testOwner2 | Tests setting and getting an 'owner' user
+EventTester | testOwner3 | Tests setting and getting an 'owner' twice
+EventTester | testStart1 | 
 EventTester | testStart2 |
 EventTester | testStart3 |
 EventTester | testStart4 |

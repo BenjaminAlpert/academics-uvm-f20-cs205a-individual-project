@@ -20,10 +20,16 @@ class EventTester(unittest.TestCase):
         self.event.setOwner(newOwner)
         assert self.event.getOwner() == newOwner, "getter or setter not working"
 
-    def testInitOwner3(self):
-        newOwner = User("root", "")
+    def testOwner3(self):
+        newOwner = User("askjfsa", "rohsdaifjas")
+
         self.event.setOwner(newOwner)
-        assert newOwner == self.event.getOwner(), "Not properly setting owner in constructor"
+        firstCorrect = self.event.getOwner() == newOwner
+
+        self.event.setOwner(newOwner)
+        secondCorrect = self.event.getOwner() == newOwner
+
+        assert firstCorrect and secondCorrect, "getter or setter not working"
 
     def testStart1(self):
         assert self.event.getStart() != None, "getStart is not intitally set to an number"
