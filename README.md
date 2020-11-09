@@ -65,7 +65,7 @@ Then, I generated the UML Class Diagrams with the below commands
 ```bash
   cd academics-uvm-f20-cs205a-individual-project
 
-  pyreverse -my -o png . --ignore=src.extras,tests
+  pyreverse -my -o png . --ignore=extras,tests
   mv classes.png ./docs/UML/entities.png
 
   pyreverse -my -o png . --ignore=src
