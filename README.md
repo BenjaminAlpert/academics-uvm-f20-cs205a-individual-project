@@ -1,7 +1,52 @@
 # Benjamin Alpert's CS205A Individual Project
 
-## UML Class Diagrams
+## Usage
 
+### Starting
+```bash
+  $ git clone https://github.com/BenjaminAlpert/academics-uvm-f20-cs205a-individual-project.git
+  $ python3 academics-uvm-f20-cs205a-individual-project
+
+```
+
+### Running
+```
+  Authorize with name 'root' and password 'root' to start
+
+
+  (0) Authorize
+  (1) Do Tests
+  (2) Create New User (requires root)
+  (3) List Users
+  (4) Create Event
+  (5) List Events
+  (6) Exit
+
+  Select Option by Number: 0
+  Enter name: root
+  Enter password: root
+```
+```
+  Successfully logged in as "root"
+
+  (0) Authorize
+  (1) Do Tests
+  (2) Create New User (requires root)
+  (3) List Users
+  (4) Create Event
+  (5) List Events
+  (6) Exit
+
+  Select Option by Number: 1
+  ............................
+  ----------------------------------------------------------------------
+  Ran 28 tests in 0.004s
+
+  OK
+```
+
+
+## UML Class Diagrams
 
 ### UML Generation
 I used [pylint's](https://pypi.org/project/pylint/) `pyreverse` command to generate the UML Class Diagrams.

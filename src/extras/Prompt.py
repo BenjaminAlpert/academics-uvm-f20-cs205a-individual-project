@@ -49,7 +49,7 @@ class CreateUserPrompt(Prompt):
 
     def getMessage(self, returnCode):
         if(returnCode == 0):
-            return "Sucesffully Created New User"
+            return "Successfully Created New User"
         if(returnCode == 1):
             return "ALERT: Failed. Check if there is already a user named \"%s\"." % self.name
         if(returnCode == 2):
@@ -77,7 +77,7 @@ class AuthorizePrompt(Prompt):
 
     def getMessage(self, returnCode):
         if(returnCode == 0):
-            return "Sucesffully logged in as \"%s\"" % self.name
+            return "Successfully logged in as \"%s\"" % self.name
         if(returnCode == 1):
             return "Authorization denied. Check you password."
         if(returnCode == 2):
