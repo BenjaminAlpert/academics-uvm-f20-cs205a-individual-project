@@ -40,7 +40,7 @@
   Select Option by Number: 1
   ............................
   ----------------------------------------------------------------------
-  Ran 28 tests in 0.001s
+  Ran 37 tests in 0.004s
 
   OK
 ```
@@ -149,7 +149,16 @@ EventTester | testInitOwner1 | Tests that ownership is initially set to the pass
 EventTester | testOwner1 | Tests getter and/or setter of 'owner' field with some special characters ("^.*&\"\'%2|")
 EventTester | testOwner2 | Tests setting and getting an 'owner' user
 EventTester | testOwner3 | Tests setting and getting an 'owner' twice
-EventTester | testStart1 | 
-EventTester | testStart2 |
-EventTester | testStart3 |
-EventTester | testStart4 |
+EventTester | testStart1 | Tests initial value of 'start' field is a number
+EventTester | testStart2 | Tests setting to an integer
+EventTester | testStart3 | Tests setting to a float
+EventTester | testStart4 | Tests setting to zero
+EventTester | testEnd1 |  Tests initial value of 'end' field is a number
+EventTester | testEnd2 | Tests setting to an integer
+EventTester | testEnd3 | Tests setting to a float
+EventTester | testEnd4 | Tests setting to zero
+EventTester | testTitle1 |
+EventTester | testAllDay1 |
+EventTester | testAllDay2 |
+EventTester | testInitGuests1 |
+EventTester | testInitGuests2 |
