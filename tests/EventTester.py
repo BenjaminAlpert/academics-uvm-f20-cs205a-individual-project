@@ -85,7 +85,7 @@ class EventTester(unittest.TestCase):
     def testInitGuests1(self):
         assert len(self.event.getGuests()) == 0 and type(self.event.getGuests()) == type([]), "Event's 'guest' field is not initally a list of size 0"
 
-    def testInitGuests2(self):
+    def testInviteGuest1(self):
         guest = User("hisadf", "dsafios")
         self.event.invite(guest)
         assert guest in self.event.getGuests() , "Event's invite() and/or getGuests() method is not working"

@@ -40,7 +40,7 @@
   Select Option by Number: 1
   ............................
   ----------------------------------------------------------------------
-  Ran 37 tests in 0.004s
+  Ran 37 tests in 0.001s
 
   OK
 ```
@@ -157,8 +157,8 @@ EventTester | testEnd1 |  Tests initial value of 'end' field is a number
 EventTester | testEnd2 | Tests setting to an integer
 EventTester | testEnd3 | Tests setting to a float
 EventTester | testEnd4 | Tests setting to zero
-EventTester | testTitle1 |
-EventTester | testAllDay1 |
-EventTester | testAllDay2 |
-EventTester | testInitGuests1 |
-EventTester | testInitGuests2 |
+EventTester | testTitle1 | Tests setTitle() and/or getTitle() method
+EventTester | testAllDay1 | Tests setAllDay() and/or getAllDay() with passing in the value 'True'
+EventTester | testAllDay2 |  Tests setAllDay() and/or getAllDay() with passing in the value 'False'
+EventTester | testInitGuests1 | Tests the 'guests' field is initially an empty list object
+EventTester | testInviteGuest1 | Tests that 'inviting' a guest adds the guest user object to the 'guests' List
