@@ -38,6 +38,18 @@ class CalendarTester(unittest.TestCase):
         self.calendar.addUser(user2)
         self.calendar.addUser(user3)
 
+        self.calendar.removeUser(user1)
+        self.calendar.removeUser(user3)
+        assert not (user1 in self.calendar.getUsers()) and (user2 in self.calendar.getUsers()) and not (user3 in self.calendar.getUsers()), "error removing a user between two other users in a list"
+
+    def testAddRemoveGetUsers2(self):
+        user1 = User("user1", "a")
+        user2 = User("user2", "b")
+        user3 = User("user3", "")
+        self.calendar.addUser(user1)
+        self.calendar.addUser(user2)
+        self.calendar.addUser(user3)
+
         self.calendar.removeUser(user2)
         assert not (user2 in self.calendar.getUsers()), "error removing a user between two other users in a list"
 

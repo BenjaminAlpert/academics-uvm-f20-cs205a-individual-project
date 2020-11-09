@@ -40,7 +40,7 @@
   Select Option by Number: 1
   ............................
   ----------------------------------------------------------------------
-  Ran 28 tests in 0.004s
+  Ran 29 tests in 0.004s
 
   OK
 ```
@@ -128,16 +128,17 @@ Class Name | Function Name | Description
 CalendarTester | testInitUsers1 | Tests the 'users' field is a List object of size 1 when the object is initialized
 CalendarTester | testInitUsers2 | Tests that the 'users' List's first element is a user with name 'root' (initially)
 CalendarTester | testInitEvents1 | Tests to check that the 'events' fields is initially a List object of 0 elements
-CalendarTester | testAddFindUsers1 |
-CalendarTester | testAddFindUsers2 |
-CalendarTester | testAddRemoveGetUsers1 |
-CalendarTester | testAddFindUsers3 |
-CalendarTester | testDoesUserExist1 |
-CalendarTester | testAddEvent1 |
-CalendarTester | testAddEvent2 |
-CalendarTester | testRemoveEvent1 |
-CalendarTester | testRemoveEvent2 |
-CalendarTester | testDoesEventExist1 |
+CalendarTester | testAddFindUsers1 | Tests to check that an uers object added can be found
+CalendarTester | testAddFindUsers2 | Test if multiple users objects are added, can they all be found?
+CalendarTester | testAddRemoveGetUsers1 | Tests for removing (multiple) users
+CalendarTester | testAddRemoveGetUsers2 | Tests for removing a user in between two other users that are not removed
+CalendarTester | testAddFindUsers3 | Tests for adding only one user
+CalendarTester | testDoesUserExist1 | Tests Calendar.doesUserExist(self, user) method by adding a user and not adding another user
+CalendarTester | testAddEvent1 | Tests addEvent(event) and getEvents() methods
+CalendarTester | testAddEvent2 | Checks that unknown 'owner' user objects are added to the calendar object if not already added
+CalendarTester | testRemoveEvent1 | Tests event removal
+CalendarTester | testRemoveEvent2 | Tests event removal with non collated adding/removing order
+CalendarTester | testDoesEventExist1 | Tests that this works properly by creating two events and adding one. Then, checking if passing in the added event object returns true while the passing in the nonadded event object returns false
 UserTester | testInitAuthorized1 |
 UserTester | testInitAuthorized2 |
 UserTester | testInitAuthorized3 |
