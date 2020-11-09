@@ -11,7 +11,7 @@ class EventTester(unittest.TestCase):
         assert self.owner == self.event.getOwner(), "Owner not properly set or got (get)"
 
     def testOwner1(self):
-        newOwner = User("^.*&%2", "password")
+        newOwner = User("^.*&\"\'%2|", "password")
         self.event.setOwner(newOwner)
         assert newOwner == self.event.getOwner(), "Owner not properly set or got (get)"
 

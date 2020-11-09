@@ -141,12 +141,12 @@ CalendarTester | testRemoveEvent2 | Tests event removal with non collated adding
 CalendarTester | testDoesEventExist1 | Tests that this works properly by creating two events and adding one. Then, checking if passing in the added event object returns true while the passing in the nonadded event object returns false
 UserTester | testInitAuthorized1 | Checks that the initially set password can be authorized with the same password string. Basically, ensures that the 'password' field is set properly
 UserTester | testInitAuthorized2 | Tests to check that the user is initially unauthorized
-UserTester | testInitName1 |
-UserTester | testSetGetName |
-UserTester | testAuthorizeAndIsAuthorized1 |
-UserTester | testUnauthorize |
-EventTester | testInitOwner1 |
-EventTester | testOwner1 |
+UserTester | testInitName1 | Tests to check that the 'name' field is initially set correctly
+UserTester | testSetGetName | Tests the getName() method
+UserTester | testAuthorizeAndIsAuthorized1 | Tests to check that incorrect passwords are not able to authorize a user
+UserTester | testUnauthorize | Tests that unauthorize() method works by using the isAuthorized() method
+EventTester | testInitOwner1 | Tests that ownership is initially set to the passed in user object
+EventTester | testOwner1 | Tests getter and/or setter of 'owner' field with some special characters ("^.*&\"\'%2|")
 EventTester | testOwner2 |
 EventTester | testInitOwner3 |
 EventTester | testStart1 |
