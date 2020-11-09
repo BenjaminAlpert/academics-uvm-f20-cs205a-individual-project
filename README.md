@@ -4,8 +4,8 @@
 
 ### Starting
 ```bash
-  $ git clone https://github.com/BenjaminAlpert/academics-uvm-f20-cs205a-individual-project.git
-  $ python3 academics-uvm-f20-cs205a-individual-project
+  git clone https://github.com/BenjaminAlpert/academics-uvm-f20-cs205a-individual-project.git
+  python3 academics-uvm-f20-cs205a-individual-project
 
 ```
 
@@ -100,7 +100,7 @@ Then, I generated the UML Class Diagrams with the below commands
 
 ## Failed Test
 
-![Failed Implementation Screenshot](/docs/UML/FailedTestScreenshot.png)
+![Failed Implementation Screenshot](/docs/failed_test_screenshot.png)
 
 ### Correct Implementation
 ```python
