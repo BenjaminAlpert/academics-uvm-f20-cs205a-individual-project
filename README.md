@@ -40,7 +40,7 @@
   Select Option by Number: 1
   ............................
   ----------------------------------------------------------------------
-  Ran 29 tests in 0.004s
+  Ran 28 tests in 0.001s
 
   OK
 ```
@@ -106,7 +106,7 @@ Then, I generated the UML Class Diagrams with the below commands
 ```python
   def findUser(self, name):
       for user in self.users:
-          if(user.getName() == name):
+          if(user.getName() == name): #This line is correct: It compares a 'name' string to a 'name' string
               return user
       return None
 ```
@@ -115,7 +115,7 @@ Then, I generated the UML Class Diagrams with the below commands
 ```python
   def findUser(self, name):
       for user in self.users:
-          if(user == name): #this link is incorrect
+          if(user == name): #this line is incorrect: It compares a 'name' string to a User object
               return user
       return None
 ```
@@ -139,9 +139,8 @@ CalendarTester | testAddEvent2 | Checks that unknown 'owner' user objects are ad
 CalendarTester | testRemoveEvent1 | Tests event removal
 CalendarTester | testRemoveEvent2 | Tests event removal with non collated adding/removing order
 CalendarTester | testDoesEventExist1 | Tests that this works properly by creating two events and adding one. Then, checking if passing in the added event object returns true while the passing in the nonadded event object returns false
-UserTester | testInitAuthorized1 |
-UserTester | testInitAuthorized2 |
-UserTester | testInitAuthorized3 |
+UserTester | testInitAuthorized1 | Checks that the initially set password can be authorized with the same password string. Basically, ensures that the 'password' field is set properly
+UserTester | testInitAuthorized2 | Tests to check that the user is initially unauthorized
 UserTester | testInitName1 |
 UserTester | testSetGetName |
 UserTester | testAuthorizeAndIsAuthorized1 |

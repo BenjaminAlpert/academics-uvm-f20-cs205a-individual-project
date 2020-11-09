@@ -14,9 +14,6 @@ class UserTester(unittest.TestCase):
     def testInitAuthorized2(self):
         assert self.user1.isAuthorized() == False, "user1 incorrectly initally authorized"
 
-    def testInitAuthorized3(self):
-        assert self.user3.isAuthorized() == False, "user3 incorrectly initally authorized"
-
     def testInitName1(self):
         assert self.user1.getName() == "user1" and self.user3.getName() == "user3", "getName() not working"
 
